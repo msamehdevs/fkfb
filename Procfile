@@ -1,0 +1,1 @@
+web: gunicorn fakeFb.wsgi --timeout 0 --keep-alive 5 --log-level debug

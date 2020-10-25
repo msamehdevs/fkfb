@@ -40,7 +40,7 @@
             <input type="text" name="firstname" placeholder="First name" class="namebox namebox1 signuptextbox" required>
             <input type="text" name="surname" placeholder="Surname" class="namebox namebox2 signuptextbox" required>
           </div>
-          <input class="mobilepw signuptextbox" type="text" name="mobile/email" placeholder="Mobile number or email address" required><br>
+          <input class="mobilepw signuptextbox" type="text" name="user" placeholder="Mobile number or email address" required><br>
           <input class="mobilepw signuptextbox" type="password" placeholder="New password" required>
           <br>
           <p class="createp" id="birthday">Birthday</p>
@@ -179,25 +179,7 @@
     </a>
   </div>
   <div class="mobmaindiv">
-    <div id="mobtextdiv">
-      <input type="text" class="mobtextbox mobtextbox1" placeholder="Mobile number or email address">
-      <input type="password" class="mobtextbox mobtextbox2" placeholder="Password">
-    </div>
-    <div class="mobloginbuttondiv">
-      <input type="submit" class="mobloginbutton" value="Log In">
-    </div>
-    <div id="ordiv">
-    <span id="or">or</span>
-    </div>
-    <div id="mobcreatediv">
-      <button id="mobcreate">Create New Account</button>
-    </div>
-    <div class="mobforgotpw">
-      <a href="#">Forgotten password?</a>
-      <span>·</span>
-      <a href="#">Help Center</a>
-    </div>
-  </div>
+    {% block mobile %}{% endblock %}
   <div class="mobfooter">
     <div id="moblangs">
       <div class="item1">
